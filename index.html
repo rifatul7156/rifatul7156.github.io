@@ -3,13 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifatul 7156</title>
+
+    <title>Rifatul</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #00bfff 0%,
+                #0099ff 45%,
+                #005bea 100%
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        /* MAIN CARD */
+        .card {
+            width: 650px;
+            min-height: 330px;
+
+            background: #ffffff;
+            border-radius: 22px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 35px;
+
+            box-shadow: 0 20px 45px rgba(0, 60, 150, 0.25);
+        }
+
+        /* PHOTO */
+        .photo {
+            width: 240px;
+            height: 240px;
+
+            flex-shrink: 0;
+
+            position: relative;
+            left: -70px;
+
+            border-radius: 16px;
+            overflow: hidden;
+
+            box-shadow: 0 15px 30px rgba(0, 100, 255, 0.30);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+        }
+
+        /* PHOTO BLUE OVERLAY */
+        .photo::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                135deg,
+                rgba(0, 191, 255, 0.08),
+                rgba(0, 91, 234, 0.20)
+            );
+
+            pointer-events: none;
+        }
+
+        /* CONTENT */
+        .content {
+            width: 360px;
+            flex-shrink: 0;
+
+            margin-left: -30px;
+        }
+
+        /* NAME */
+        h1 {
+            color: #121225;
+
+            font-size: 27px;
+            line-height: 1.2;
+
+            margin-bottom: 7px;
+        }
+
+        /* DESIGNATION */
+        .designation {
+            color: #00a8e8;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin-bottom: 16px;
+        }
+
+        /* DESCRIPTION */
+        p {
+            color: #55566f;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            margin-bottom: 22px;
+
+            /* This makes the text justified */
+            text-align: justify;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+
+            padding: 12px 26px;
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            border-radius: 25px;
+
+            background: linear-gradient(
+                135deg,
+                #00bfff,
+                #0077ff
+            );
+
+            box-shadow: 0 10px 20px rgba(0, 150, 255, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 14px 25px rgba(0, 150, 255, 0.35);
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            body {
+                padding: 20px 15px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 400px;
+
+                padding: 30px 25px;
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .photo {
+                width: 210px;
+                height: 210px;
+
+                left: 0;
+
+                margin-bottom: 30px;
+            }
+
+            .content {
+                width: 100%;
+                max-width: 330px;
+
+                margin-left: 0;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Rifatul</h1>
-    <p>Software Engineer</p>
+    <div class="card">
+
+        <!-- PHOTO -->
+        <div class="photo">
+            <img src="me.jpg" alt="My Photo">
+        </div>
+
+        <!-- INFORMATION -->
+        <div class="content">
+
+            <h1>Riatul</h1>
+
+            <div class="designation">
+                Software Engineer
+            </div>
+
+            <p>
+                I'm a software engineer with a strong passion for coding
+                and technology. I enjoy building practical, user-friendly
+                software, solving complex problems, and continuously
+                learning new technologies. I love turning ideas into
+                reliable and meaningful digital experiences.
+            </p>
+
+            <!-- <a href="#" class="button">
+                READ MORE
+            </a> -->
+
+        </div>
+
+    </div>
 
 </body>
 </html>
